@@ -23,7 +23,7 @@ router.get("/children", (req, res) => {
       res.status(400).json({ msg: "please provide a name,age,location,screendate,height,weight" });
     } else {
       db("children")
-        .insert(req.body, "id")
+        .insert(req.body)
         .then(ids => {
           db("children")
             .where({ id: ids[0] })

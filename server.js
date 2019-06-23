@@ -12,4 +12,9 @@ server.use("/api", countryRouter);
 server.use("/api", communityRouter);
 server.use("/api", childrenRouter);
 server.use("/api", personRouter);
+
+server.get("/", (req, res) => {
+    res.status(200).json({ api: "is up and running" });
+});
+
 module.exports = server;

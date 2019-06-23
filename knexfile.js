@@ -4,24 +4,24 @@ module.exports = {
   development: {
     client: "sqlite3",
     connection: {
-      filename: "./data/ICN.db3"
+      filename: "./Data/ICN.db3"
     },
     useNullAsDefault: true,
     migrations: {
-      directory: "./data/migrations"
+      directory: "./Data/migrations"
     },
     seeds: {
-      directory: "./data/seeds"
+      directory: "./Data/seeds"
     }
   },
   production: {
     client: "pg",
     connection: process.env.DATABASE_URL,
     migrations: {
-      directory: "./data/migrations"
+      directory: "./Data/migrations"
     },
     seeds: {
-      directory: "./data/seeds"
+      directory: "./Data/seeds"
     }
   }
 };

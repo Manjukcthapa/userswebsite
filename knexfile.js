@@ -14,12 +14,11 @@ module.exports = {
       directory: "./data/seeds"
     }
   },
-  development: {
-    client: "sqlite3",
-    connection: {
-      filename: "./data/ICN.db3"
-    },
-    useNullAsDefault: true,
+
+
+  production: {
+    client: "pg",
+    connection: process.env.DATABASE_URL,
     migrations: {
       directory: "./data/migrations"
     },

@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const knex = require("knex")
 const knexConfig = require("../knexfile.js");
-const db = knex(knexConfig.development);
+const db = knex(knexConfig[process.env.NODE_ENV]);
 
 
 router.get("/personinfo", (req, res) => {
